@@ -1,0 +1,722 @@
+@media screen and (max-width: 1200px){
+    .flexLogReg{
+        flex-direction: column-reverse;
+    }
+    .photo-flexLogReg{
+        display: none;
+    }
+}
+@media screen and (max-width: 980px){
+    .leftFixedMenu{
+        display: none;
+    }
+    .tab-header{
+        flex-wrap: wrap;
+    }
+    .title-mainContent-Center-2{
+        margin-bottom: 15px;
+    }
+    .blockFlex-blockCourses{
+        width: 100%;
+    }
+    .tableInfoNavigation{
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+    .title-refInfoYour p{
+        font-size: 20px;
+    }
+    .text-refInfoYour{
+        font-size: 14px;
+    }
+    .title-refInfoYour{
+        margin-bottom: 10px;
+    }
+    .refInfoYour{
+        padding: 10px;
+    }
+    .refBlockInfoTable{
+        margin-top: 40px;
+    }
+    .mainContent{
+        padding-left: 40px;
+    }
+    header{
+        width: calc(100% + 40px);
+        padding-right: 80px;
+    }
+    .logoMobHeader{
+        display: block;
+        height: 24px;
+    }
+    .left-headerLK{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    .hamburger-menu{
+        display: block;
+    }
+    #menu__toggle {
+        opacity: 0;
+        display: none;
+    }
+    #menu__toggle:checked ~ .menu__btn > span::before {
+        display: none;
+    }
+    .closeBurger{
+        display: none;
+    }
+    #menu__toggle:checked ~ .menu__btn {
+        .closeBurger{
+            display: flex;
+        }
+    }
+    #menu__toggle:checked ~ .menu__btn {
+        .burgerSvg{
+            display: none;
+        }
+    }
+    #menu__toggle:checked ~ .menu__box {
+        visibility: visible;
+        right: 0;
+    }
+    .menu__btn {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        z-index: 1000;
+        width: 32px;
+        height: 32px;
+        position: relative;
+    }
+    .menu__box {
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        list-style: none;
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(10px);
+        transition-duration: .25s;
+        z-index: 999;
+        padding: 70px 40px;
+    }
+    .listContentBurgerHeader{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    .listContentBurgerHeader .right-headerLK{
+        gap: 15px;
+    }
+    .left-title-mainContent-Center p{
+        font-size: 20px;
+    }
+    .left-title-mainContent-Center img{
+        width: 32px;
+    }
+    .left-title-mainContent-Center{
+        gap: 10px;
+    }
+    .right-title-mainContent-Center a{
+        padding: 8px 15px;
+    }
+    .block-tableInfoMoneyStatistic span{
+        font-size: 12px;
+    }
+    .block-tableInfoMoneyStatistic p{
+        font-size: 30px;
+    }
+    .tableInfoMoneyStatistic{
+        margin-top: 15px;
+    }
+    .refBlockInfoMoneyStatistic{
+        margin-top: 30px;
+    }
+    .title-left-flexLogReg{
+        font-size: 22px;
+    }
+    .text-left-flexLogReg{
+        font-size: 16px;
+    }
+    .contentMainLanding{
+        padding: 140px 20px 0;
+    }
+    .headLanding{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .listHeaderLanding{
+        display: none;
+    }
+    .links-listContentBurgerHeaderAll{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+    }
+    .links-listContentBurgerHeaderAll a{
+        color: #0E0637;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 145%; /* 20.3px */
+    }
+    .rightCoursesHeaderLandingLinkADesk{
+        display: none!important;
+    }
+    .listContentBurgerHeader .rightCoursesHeaderLandingLinkADesk{
+        display: flex!important;
+    }
+    .right-title-mainContent-Center{
+        flex-direction: column;
+        width: 100%;
+    }
+    .rightCoursesHeaderLanding{
+        flex-direction: column;
+    }
+    .rightCoursesHeaderLanding-2{
+        flex-direction: row;
+    }
+    .rightCoursesHeaderLanding .listContentBurgerHeader{
+        align-items: center;
+        gap: 40px;
+    }
+    .rightCoursesHeaderLanding .menu__box{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .contentMainLanding {
+        padding: 100px 20px 0;
+    }
+}
+@media screen and (max-width: 780px){
+    .titlePageHeader{
+        display: none;
+    }
+    .modal-content-3{
+        width: 95%;
+        padding: 15px;
+    }
+    .flexSettings{
+        flex-direction: column;
+        gap: 20px;
+    }
+    #teamTable{
+        width: 760px;
+    }
+    .teamTable{
+        width: 760px;
+    }
+    .teamTable-2{
+        width: 900px;
+    }
+    .wrapper-teamTable{
+        width: 100%;
+        overflow-y: scroll;
+        padding-bottom: 10px;
+    }
+    .yourMoneyHeader{
+        display: none;
+    }
+    .listBurgerUl .yourMoneyHeader{
+        display: block;
+    }
+    .headerLK{
+        padding-left: 20px;
+        padding-right: 40px;
+        width: calc(100% + 20px);
+    }
+    header{
+        margin-left: -20px;
+    }
+    .mainContent{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .modal-content-1{
+        width: 95%;
+    }
+    .modal-content-2{
+        width: 95%;
+    }
+    .flexGraphModal{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .blockTransaction-2{
+        margin-top: 30px;
+    }
+    #line-chart{
+        width: 100% !important;
+    }
+    .circle-flexGraphModal{
+        width: 300px;
+    }
+    #pie-chart{
+        width: 100% !important;
+        height: auto!important;
+    }
+    .block-flexProductsWrapper{
+        width: calc(50% - 14px);
+    }
+    .flex-block-flexProductsWrapper{
+        width: calc(50% - 14px);
+    }
+    .blockSomeInfoPrise{
+        flex-direction: column;
+    }
+    .right-blockSomeInfoPrise{
+        padding: 0 15px 15px;
+    }
+    .blockSomeInfoPrise__photo{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 520px){
+    .mainContent{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .logoMobHeader{
+        height: 20px;
+    }
+    .wrapper-teamTable-3 .teamTable{
+        width: 400px;
+    }
+    .wrapper-teamTable-2 .teamTable{
+        width: 100%;
+    }
+    .wrapper-teamTable-2 #teamTable{
+        width: 100%;
+    }
+    .btnTelegram{
+        height: 40px;
+        font-size: 12px;
+    }
+    .bock-flexSettings{
+        gap: 10px;
+    }
+    .title-bock-flexSettings{
+        font-size: 20px;
+    }
+    .left-flex-modal-content-111{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .left-flex-modal-content-111 .titleModal{
+        text-align: center;
+    }
+    .tab-header__item{
+        width: 100%;
+        padding: 11px;
+        font-size: 14px;
+    }
+    .videoPageCourse{
+        height: 150px;
+    }
+    .title-blockCourses{
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    .info-blockFlex-blockCourses h3{
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+    .info-blockFlex-blockCourses p{
+        margin-bottom: 8px;
+        font-size: 12px;
+    }
+    .flex-blockCourses{
+        gap: 15px;
+    }
+    .photo-flexLogReg{
+        width: 100%;
+        display: block;
+    }
+    .blockFlex-blockCourses__img{
+        width: 150px;
+    }
+    .blockCourses .blockCourses-2{
+        margin-top: 30px;
+    }
+    .flexLogReg{
+        gap: 20px;
+    }
+    .btn-flexLogReg-2{
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+    .right-blockSomeInfoPrise h1{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .right-blockSomeInfoPrise p{
+        font-size: 14px;
+    }
+    .title-blockSomeInfoPrise{
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+    .text-blockSomeInfoPrise{
+        font-size: 14px;
+    }
+    .flexProductsWrapper{
+        flex-direction: column;
+    }
+    .block-flexProductsWrapper{
+        width: 100%;
+    }
+    .flex-block-flexProductsWrapper{
+        width: 100%;
+    }
+    .block-flexProductsWrapperMob{
+        display: block;
+    }
+    .block-flexProductsWrapperMobNone{
+        display: none;
+    }
+    .circle-flexGraphModal{
+        width: 200px;
+    }
+    .tag-flex-titleModal{
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+    .flex-titleModal{
+        gap: 10px;
+        flex-wrap: wrap;
+        margin: 15px 0;
+    }
+    .dateInput2{
+        margin-top: 15px;
+    }
+    .modal-content-2{
+        padding: 15px;
+    }
+    .infoTextPages-tableInfoNavigation{
+        font-size: 12px;
+    }
+    .arrow-pageNavAr-tableInfoNavigation{
+        width: 25px;
+        height: 25px;
+    }
+    .arrow-pageNavAr-tableInfoNavigation img{
+        width: 25px;
+    }
+    .moreStroke-tableInfoNavigation p{
+        font-size: 12px;
+    }
+    .moreStroke-tableInfoNavigation select{
+        height: 25px;
+        width: 100px;
+        font-size: 12px;
+        padding: 0 0 0 10px;
+    }
+    .mainContent-Center{
+        padding-bottom: 20px;
+    }
+    .tableInfoNavigation{
+        margin-top: 20px;
+    }
+    .title-refBlockInfoTable{
+        margin-bottom: 15px;
+    }
+    .pageNavAr-tableInfoNavigation{
+        gap: 5px;
+    }
+    .pageNavAr-tableInfoNavigation__a{
+        width: 25px;
+        height: 25px;
+        max-width: 25px;
+        padding: 0;
+        max-height: 25px;
+        font-size: 12px;
+    }
+    #teamTable th, #teamTable td{
+        padding: 10px;
+        font-size: 10px;
+    }
+    #teamTable{
+        width: 500px;
+    }
+    .teamTable th, .teamTable td{
+        padding: 10px;
+        font-size: 10px;
+    }
+    .teamTable{
+        width: 500px;
+    }
+    .teamTable-2{
+        width: 700px;
+    }
+    #reportrange4{
+        width: 100% !important;
+        justify-content: center;
+    }
+    #reportrange5{
+        width: 100% !important;
+        justify-content: center;
+    }
+    .title-refBlockInfoTable{
+        flex-wrap: wrap;
+    }
+    #reportrange{
+        width: 100% !important;
+        justify-content: center;
+    }
+    .refLinkYour{
+        flex-direction: column;
+    }
+    .refLinkCopy{
+        width: 100%;
+    }
+    .headerLK{
+        width: calc(100% + 10px);
+        margin-left: -10px;
+        padding: 10px 20px 10px 10px;
+    }
+    .dropdown-selected{
+        font-size: 12px;
+        padding: 8px 5px;
+        width: fit-content;
+    }
+    .dropdown-list{
+        width: 85px;
+    }
+    .dropdown{
+        width: auto;
+    }
+    .right-headerLK{
+        gap: 20px;
+    }
+    .menu__box{
+        padding: 70px 10px;
+    }
+    .menu__box{
+        overflow: scroll;
+    }
+    .mainContent-Center{
+        padding-top: 85px;
+    }
+    .line-tableInfoMoneyStatistic{
+        display: none;
+    }
+    .tableInfoMoneyStatistic{
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+    .title-mainContent-Center{
+        flex-wrap: wrap;
+    }
+    .right-title-mainContent-Center{
+        width: 100%;
+    }
+    .right-title-mainContent-Center a{
+        width: 100%;
+    }
+    .modal-content-1{
+        padding: 15px;
+    }
+    .titleModal{
+        font-size: 16px;
+    }
+    .textModalInfo{
+        font-size: 12px;
+        margin: 15px 0;
+    }
+    .modalBtnV1{
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+    .close{
+        top: 20px;
+        right: 15px;
+    }
+    .formModal-2{
+        margin: 15px 0;
+        gap: 10px;
+    }
+    .formModal-2 label span{
+        font-size: 12px;
+    }
+    .formModal-2 label input{
+        height: 40px;
+        font-size: 14px;
+        padding-left: 10px;
+    }
+    .formModal-2 label select{
+        height: 40px;
+        font-size: 14px;
+        padding-left: 10px;
+    }
+    .flex-modal-content-1{
+        flex-direction: column-reverse;
+    }
+    .line-blockReferralsMore p{
+        font-size: 12px;
+    }
+    .line-blockReferralsMore span{
+        font-size: 12px;
+    }
+    .blockReferralsMore{
+        gap: 10px;
+        margin-top: 15px;
+    }
+    .formModal-2 label input::placeholder{
+        font-size: 14px;
+    }
+    .filtersMobProducts{
+        width: 100%;
+        display: flex;
+    }
+    .filtersMobProducts label{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        width: 100%;
+    }
+    .filtersMobProducts label select{
+        width: 100%;
+        border-radius: 8px;
+        border: 1px solid #C8C8D0;
+        background: #FFF;
+        padding: 12px;
+        height: 40px;
+        font-size: 12px;
+        margin-bottom: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 145%; /* 17.4px */
+    }
+    .textWrapperBlock-flexProductsWrapper{
+        padding: 10px;
+    }
+    .moreInfoProductBtn{
+        position: relative;
+        bottom: auto;
+    }
+    .textWrapperBlock-flexProductsWrapper p{
+        font-size: 18px;
+    }
+    .circle-title-textWrapperBlock-flexProductsWrapper{
+        width: 15px;
+        height: 15px;
+    }
+    .title-textWrapperBlock-flexProductsWrapper{
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+    .priceProductCard{
+        height: 40px;
+        padding: 10px;
+    }
+    .priceProductCard p{
+        font-size: 15px;
+    }
+    .btnOpenBuyPrice{
+        margin-top: 15px;
+        height: 40px;
+        padding: 11px 24px;
+        font-size: 14px;
+    }
+    .listProductInfo li{
+        font-size: 14px;
+    }
+    .moreInfoProductBtn{
+        font-size: 14px;
+    }
+    .block-flexProductsWrapper{
+        padding-bottom: 15px;
+    }
+    .text-top-textWrapperBlock-flexProductsWrapper1{
+        margin-bottom: 0!important;
+    }
+    .textInfoPrisesBottom{
+        font-size: 14px;
+        margin-top: 20px;
+    }
+    .textInfoPrisesBottom span{
+        font-size: 16px;
+    }
+    .flex-textInfoPrisesBottom{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .block-flex-textInfoPrisesBottom h3{
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    .block-flex-textInfoPrisesBottom ul li{
+        font-size: 14px;
+    }
+    .block-flex-textInfoPrisesBottom p{
+        font-size: 14px;
+    }
+
+    .filtersMobProducts span{
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 145%; /* 17.4px */
+    }
+    .step-content-1{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .steps{
+        margin: 15px 0;
+    }
+    .step-title{
+        font-size: 14px;
+        margin-top: 5px;
+    }
+    .linksStore{
+        gap: 10px;
+    }
+    .buttons button{
+        width: 100% !important;
+        padding: 11px!important;
+    }
+    .step-number{
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+    .btn-flexLogReg-1{
+        font-size: 14px;
+    }
+    .btn-flexLogReg-2{
+        font-size: 14px;
+
+    }
+}
+@media screen and (max-width: 390px){
+    .blockFlex-blockCourses{
+        flex-direction: column;
+    }
+    .blockFlex-blockCourses__img{
+        width: 100%;
+    }
+    .info-blockFlex-blockCourses{
+        padding-top: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

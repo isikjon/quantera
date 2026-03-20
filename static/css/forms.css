@@ -1,0 +1,36 @@
+.form-error {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 4px;
+    display: block;
+}
+
+.form-messages {
+    margin-bottom: 16px;
+}
+
+.form-messages p {
+    font-size: 13px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+.form-messages .msg-error {
+    background: rgba(231, 76, 60, 0.08);
+    color: #e74c3c;
+}
+
+.form-messages .msg-success {
+    background: rgba(39, 174, 96, 0.08);
+    color: #27ae60;
+}
+
+.form-messages .msg-info {
+    background: rgba(52, 152, 219, 0.08);
+    color: #3498db;
+}
+
+.formModal-2 label input.input-error {
+    border-color: #e74c3c;
+}

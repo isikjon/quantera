@@ -1,0 +1,117 @@
+{% extends 'base_auth.html' %}
+{% load static %}
+
+{% block content %}
+<div class="flexLogReg flexLogReg-2">
+    <div class="left-flexLogReg">
+        <h2 class="title-left-flexLogReg">
+            Регистрация
+        </h2>
+        <p class="text-left-flexLogReg">
+            Создайте свой аккаунт и начните пользоваться нашей платформой
+        </p>
+        {% if messages %}
+        <div class="form-messages">
+            {% for message in messages %}
+            <p class="msg-{{ message.tags }}">{{ message }}</p>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% if form.non_field_errors %}
+        <div class="form-messages">
+            {% for error in form.non_field_errors %}
+            <p class="msg-error">{{ error }}</p>
+            {% endfor %}
+        </div>
+        {% endif %}
+        <form class="formModal-2" action="{% url 'accounts:register' %}{% if ref_code %}?ref={{ ref_code }}{% endif %}" method="post">
+            {% csrf_token %}
+            <label>
+                <span>
+                    ФИО
+                </span>
+                <input type="text" name="full_name" placeholder="Иванов Иван Иванович" value="{{ form.full_name.value|default:'' }}" required {% if form.full_name.errors %}class="input-error"{% endif %}>
+                {% if form.full_name.errors %}
+                <small class="form-error">{{ form.full_name.errors.0 }}</small>
+                {% endif %}
+            </label>
+            <label>
+                <span>
+                    Номер телефона
+                </span>
+                <input type="tel" name="phone" id="phoneInput" placeholder="+7 (___) ___ __-__" value="{{ form.phone.value|default:'' }}" {% if form.phone.errors %}class="input-error"{% endif %}>
+                {% if form.phone.errors %}
+                <small class="form-error">{{ form.phone.errors.0 }}</small>
+                {% endif %}
+            </label>
+            <label>
+                <span>
+                    Email
+                </span>
+                <input type="email" name="email" placeholder="example@yandex.ru" value="{{ form.email.value|default:'' }}" required {% if form.email.errors %}class="input-error"{% endif %}>
+                {% if form.email.errors %}
+                <small class="form-error">{{ form.email.errors.0 }}</small>
+                {% endif %}
+            </label>
+            <label>
+                <span>
+                    Пароль
+                </span>
+                <input type="password" name="password" placeholder="********" required {% if form.password.errors %}class="input-error"{% endif %}>
+                {% if form.password.errors %}
+                <small class="form-error">{{ form.password.errors.0 }}</small>
+                {% endif %}
+            </label>
+            <button type="submit" class="btn-flexLogReg-1">
+                Регистрация
+            </button>
+            <a href="#!" class="btn-flexLogReg-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M23.9885 12.2245C23.9885 11.2413 23.9069 10.5238 23.7301 9.77966H12.239V14.2176H18.984C18.8481 15.3205 18.1138 16.9815 16.4819 18.0976L16.459 18.2462L20.0923 20.9964L20.344 21.0209C22.6558 18.9347 23.9885 15.8653 23.9885 12.2245Z" fill="#4285F4"/>
+                    <path d="M12.239 23.9176C15.5435 23.9176 18.3177 22.8545 20.344 21.0209L16.4819 18.0976C15.4484 18.8018 14.0612 19.2934 12.239 19.2934C9.00248 19.2934 6.25551 17.2074 5.27629 14.324L5.13276 14.3359L1.35483 17.1927L1.30542 17.3269C3.31804 21.2334 7.45214 23.9176 12.239 23.9176Z" fill="#34A853"/>
+                    <path d="M5.27634 14.3239C5.01797 13.5798 4.86844 12.7825 4.86844 11.9587C4.86844 11.1349 5.01797 10.3376 5.26275 9.59354L5.25591 9.43507L1.43062 6.53235L1.30547 6.59052C0.475969 8.21162 0 10.032 0 11.9587C0 13.8854 0.475969 15.7058 1.30547 17.3269L5.27634 14.3239Z" fill="#FBBC05"/>
+                    <path d="M12.239 4.62403C14.5372 4.62403 16.0875 5.59402 16.9714 6.40461L20.4255 3.10928C18.3042 1.1826 15.5435 0 12.239 0C7.45214 0 3.31804 2.68406 1.30542 6.59056L5.2627 9.59359C6.25551 6.7102 9.00248 4.62403 12.239 4.62403Z" fill="#EB4335"/>
+                </svg>
+                Регистрация с помощью Google
+            </a>
+            <span class="textBottomLink-flexLogReg">
+                Уже есть аккаунт? <a href="{% url 'accounts:login' %}" class="btn-flexLogReg-3">Войти</a>
+            </span>
+        </form>
+    </div>
+    <img src="{% static 'img/photoReg.svg' %}" alt="" class="photo-flexLogReg">
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+(function() {
+    var phone = document.getElementById('phoneInput');
+    if (!phone) return;
+
+    phone.addEventListener('input', function(e) {
+        var x = e.target.value.replace(/\D/g, '');
+        if (x.charAt(0) === '8') x = '7' + x.substring(1);
+        if (x.charAt(0) !== '7' && x.length > 0) x = '7' + x;
+
+        var formatted = '';
+        if (x.length > 0) formatted = '+' + x.substring(0, 1);
+        if (x.length > 1) formatted += ' (' + x.substring(1, 4);
+        if (x.length >= 4) formatted += ') ';
+        if (x.length > 4) formatted += x.substring(4, 7);
+        if (x.length > 7) formatted += ' ' + x.substring(7, 9);
+        if (x.length > 9) formatted += '-' + x.substring(9, 11);
+
+        e.target.value = formatted;
+    });
+
+    phone.addEventListener('focus', function(e) {
+        if (!e.target.value) e.target.value = '+7 (';
+    });
+
+    phone.addEventListener('blur', function(e) {
+        if (e.target.value === '+7 (') e.target.value = '';
+    });
+})();
+</script>
+{% endblock %}

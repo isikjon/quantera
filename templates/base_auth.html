@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Quantera — прозрачные алгоритмы и спокойный рост</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/adaptive.css' %}">
+    <link rel="stylesheet" href="{% static 'css/forms.css' %}">
+    <link rel="icon" href="{% static 'img/icon.png' %}" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<main>
+    <header class="headLanding">
+        <div class="container">
+            <div class="flexCoursesHeaderLanding">
+                <div class="leftCoursesHeaderLanding">
+                    <img src="{% static 'img/logoLK.png' %}" alt="" class="logoLanding">
+                </div>
+                <div class="listHeaderLanding">
+                    <a href="#!">
+                        О проекте
+                    </a>
+                    <a href="#!">
+                        Тарифы
+                    </a>
+                    <a href="#!">
+                        Отзывы
+                    </a>
+                    <a href="#!">
+                        FAQ
+                    </a>
+                    <a href="#!">
+                        Контакты
+                    </a>
+                </div>
+                <div class="rightCoursesHeaderLanding rightCoursesHeaderLanding-2">
+                    <a href="#!" class="linkTg-rightCoursesHeaderLanding rightCoursesHeaderLandingLinkADesk">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="35" viewBox="0 0 34 35" fill="none">
+                            <rect width="34" height="35" rx="17" fill="#1C3A57"/>
+                            <path d="M23.7999 11.0269L21.2453 24.7557C21.2453 24.7557 20.8879 25.7076 19.906 25.2511L14.0118 20.4335L13.9845 20.4193C14.7806 19.6572 20.9544 13.7398 21.2243 13.4716C21.642 13.0562 21.3827 12.8089 20.8977 13.1227L11.7782 19.2963L8.25989 18.0344C8.25989 18.0344 7.70622 17.8245 7.65296 17.368C7.59899 16.9107 8.27812 16.6634 8.27812 16.6634L22.6211 10.6653C22.6211 10.6653 23.7999 10.1132 23.7999 11.0269Z" fill="#FEFEFE"/>
+                        </svg>
+                    </a>
+                    <div class="right-title-mainContent-Center">
+                        <a href="#!" class="right-title-mainContent-Center1 rightCoursesHeaderLandingLinkADesk">Купить курс</a>
+                        <a href="{% url 'accounts:login' %}" class="right-title-mainContent-Center2 rightCoursesHeaderLandingLinkADesk">Личный кабинет</a>
+                    </div>
+                    <div class="hamburger-menu">
+                        <input id="menu__toggle" type="checkbox" />
+                        <label class="menu__btn" for="menu__toggle">
+                            <img src="{% static 'img/burger.svg' %}" alt="" class="burgerSvg">
+                            <img class="closeBurger" src="{% static 'img/close.svg' %}" alt="">
+                        </label>
+                        <ul class="menu__box">
+                            <li class="content-burger">
+                                <ul class="listBurgerUl">
+                                    <li class="listContentBurgerHeader">
+                                        <div class="links-listContentBurgerHeaderAll">
+                                            <a href="#!">
+                                                О проекте
+                                            </a>
+                                            <a href="#!">
+                                                Тарифы
+                                            </a>
+                                            <a href="#!">
+                                                Отзывы
+                                            </a>
+                                            <a href="#!">
+                                                FAQ
+                                            </a>
+                                            <a href="#!">
+                                                Контакты
+                                            </a>
+                                        </div>
+                                        <div class="rightCoursesHeaderLanding">
+                                            <a href="#!" class="linkTg-rightCoursesHeaderLanding rightCoursesHeaderLandingLinkADesk">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="35" viewBox="0 0 34 35" fill="none">
+                                                    <rect width="34" height="35" rx="17" fill="#1C3A57"/>
+                                                    <path d="M23.7999 11.0269L21.2453 24.7557C21.2453 24.7557 20.8879 25.7076 19.906 25.2511L14.0118 20.4335L13.9845 20.4193C14.7806 19.6572 20.9544 13.7398 21.2243 13.4716C21.642 13.0562 21.3827 12.8089 20.8977 13.1227L11.7782 19.2963L8.25989 18.0344C8.25989 18.0344 7.70622 17.8245 7.65296 17.368C7.59899 16.9107 8.27812 16.6634 8.27812 16.6634L22.6211 10.6653C22.6211 10.6653 23.7999 10.1132 23.7999 11.0269Z" fill="#FEFEFE"/>
+                                                </svg>
+                                            </a>
+                                            <div class="right-title-mainContent-Center">
+                                                <a href="#!" class="right-title-mainContent-Center1 rightCoursesHeaderLandingLinkADesk">Купить курс</a>
+                                                <a href="{% url 'accounts:login' %}" class="right-title-mainContent-Center2 rightCoursesHeaderLandingLinkADesk">Личный кабинет</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="contentMainLanding">
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+{% block scripts %}{% endblock %}
+
+</body>
+</html>
